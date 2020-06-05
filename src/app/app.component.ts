@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Unittest-Example';
+
+  toUpperCase(arg:string):string{
+    return arg.toUpperCase();
+  }
 }

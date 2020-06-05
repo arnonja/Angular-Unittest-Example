@@ -1,0 +1,7 @@
+<div class="light-box">
+  <h1>Light Bulb</h1>
+  <div class="result-box" (click)="switch()">
+    <img *ngIf="isOn" src="assets/on.png" />
+    <img *ngIf="!isOn" src="assets/off.png" />
+  </div>
+</div>

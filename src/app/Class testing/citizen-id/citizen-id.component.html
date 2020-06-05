@@ -1,0 +1,14 @@
+<div class="citizen-box">
+  <h1>Verify Citizen ID</h1>
+  <div class="result-box">
+    <div *ngIf="result" class="passed-result">PASSED</div>
+    <div *ngIf="!result && result != null" class="invalid-result">INVALID</div>
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Citizen ID</span>
+    </div>
+    <input #inputCitizen type="text" aria-label="citizenID" class="form-control" />
+    <button class="btn btn-dark" type="button" (click)="onClickSubmit()">Submit</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.detail-box{
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.detail-box .result-box{
+    text-align: center;
+}
+
+.detail-box .result-box table{
+    margin: 0 auto;
+}
+
+.detail-box .result-box table tr td{
+    text-align: center;
+    padding: 10px 30px;
+}
+

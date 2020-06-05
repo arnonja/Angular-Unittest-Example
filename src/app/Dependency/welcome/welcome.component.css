@@ -1,0 +1,16 @@
+.welcome-box{
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.welcome-box .result-box{
+    /* background: black; */
+    background-image: linear-gradient(to bottom right, pink, lightblue);
+    height: 200px;
+    font-size: 36px;
+}
+
+.welcome-box .result-box h1{
+    line-height: 200px;
+}

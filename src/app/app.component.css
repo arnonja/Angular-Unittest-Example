@@ -1,0 +1,21 @@
+.header{
+    height: 60px;
+}
+
+.body-box{
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+.body-box .sidebar-box{
+    padding: 20px;
+}
+
+.body-box .sidebar-box ul li{
+    cursor: pointer;
+    outline: none;
+}
+
+.body-box .content-box{
+    padding: 20px;
+}

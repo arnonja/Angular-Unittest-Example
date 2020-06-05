@@ -1,0 +1,20 @@
+.citizen-box{
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+.citizen-box .result-box{
+    height: 100px;
+    padding: 20px;
+    font-size: 36px;
+}
+
+.citizen-box .result-box .passed-result{
+    background-color: rgb(67, 226, 75);
+}
+
+.citizen-box .result-box .invalid-result{
+    background-color: rgb(255, 66, 66);
+
+}
