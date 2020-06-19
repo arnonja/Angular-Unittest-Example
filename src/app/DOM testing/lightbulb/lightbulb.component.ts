@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-lightbulb',
@@ -9,7 +9,7 @@ export class LightbulbComponent implements OnInit {
   //เก็บสถานะการเปิด ปิด ของหลอดไฟ
   isOn: boolean = true;
 
-  constructor() {}
+  constructor(private _ChangeDetectorRe:ChangeDetectorRef) {}
 
   ngOnInit(): void {}
 

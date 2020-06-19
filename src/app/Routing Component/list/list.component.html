@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let user of users; let i =index" routerLink="/users/{{user.id}}">
+      <tr *ngFor="let user of users; let i =index" (click)="gotoDetail(user.id)">
           <td>{{ i+1 }}</td>
           <td>{{ user.firstname }}</td>
           <td>{{ user.lastname }}</td>

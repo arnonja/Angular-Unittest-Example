@@ -4,6 +4,7 @@
     text-align: center;
 }
 
-.list-box .result-box{
+.list-box .result-box table tr td{
+    cursor: pointer;
 }
 

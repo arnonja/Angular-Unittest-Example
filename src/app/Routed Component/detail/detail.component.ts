@@ -20,8 +20,11 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     //ดึงค่า Path Parameter เพื่อดึงค่า ID
-    let id = this._ActivatedRoute.snapshot.paramMap.get('id');
-    //นำค่า ID ที่ได้รัยมาหา User เพื่อใช้ในการแสดงข้อมูล
-    this.user = this.users.find(user => user.id == id);
+    this._ActivatedRoute.paramMap.subscribe(param => {
+      let id = param.get('id');
+      //นำค่า ID ที่ได้รัยมาหา User เพื่อใช้ในการแสดงข้อมูล
+      this.user = this.users.find(user => user.id == id);
+    });
+    
   }
 }

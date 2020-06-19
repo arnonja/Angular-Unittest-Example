@@ -1,7 +1,6 @@
 <div class="light-box">
   <h1>Light Bulb</h1>
-  <div class="result-box" (click)="switch()">
-    <img *ngIf="isOn" src="assets/on.png" />
-    <img *ngIf="!isOn" src="assets/off.png" />
+  <div class="result-box">
+    <img id="lightbulb" src="{{ isOn ? 'assets/on.png' : 'assets/off.png' }}"  (click)="switch()"/>
   </div>
 </div>

@@ -2,21 +2,21 @@
     {
         "id": 1,
         "firstname": "pitak",
-        "lastname": "mechai",
+        "lastname": "meechai",
         "email": "pi.m@gmail.com",
         "tel": "0912875566"
     },
     {
         "id": 2,
         "firstname": "pongpat",
-        "lastname": "mechai",
+        "lastname": "meechai",
         "email": "po.m@gmail.com",
         "tel": "0854446323"
     },
     {
         "id": 3,
         "firstname": "patpong",
-        "lastname": "mechai",
+        "lastname": "meechai",
         "email": "pa.m@gmail.com",
         "tel": "0871128897"
     }

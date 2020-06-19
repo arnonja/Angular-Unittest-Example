@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as data from '../../../assets/users.json';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -8,7 +9,11 @@ import * as data from '../../../assets/users.json';
 })
 export class ListComponent implements OnInit {
   users = (data as any).default;
-  constructor() {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {}
+
+  gotoDetail(userId) {
+    this.router.navigateByUrl('/users/'+userId);
+  }
 }
