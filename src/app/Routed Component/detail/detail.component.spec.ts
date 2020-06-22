@@ -6,15 +6,17 @@ import { ReplaySubject } from 'rxjs';
 import * as data from '../../../assets/users.json';
 
 describe('DetailComponent', () => {
-  let users: [any] = (data as any).default;
   let component: DetailComponent;
   let fixture: ComponentFixture<DetailComponent>;
+  //จัดเตรียมข้อมูลที่ใช้ทดสอบ
+  let users : [any] = (data as any).default;
+  let expectedUser = users[0];
 
   beforeEach(async(() => {
     //สร้าง activedRouteStub เพื่อจำลองการทำงานของ ActivatedRoute
     let activatedRouteStub = new ActivatedRouteStub();
-    //กำหนดให้มีการ Set ค่า Parameter 
-    activatedRouteStub.setParamMap({id: 1})
+    //กำหนดให้มีการ Set ค่า Parameter ด้วยข้อมูลที่เราเตรียมไว้ทดสอบ
+    activatedRouteStub.setParamMap({id: expectedUser.id})
     TestBed.configureTestingModule({
       declarations: [DetailComponent],
       providers: [{ provide: ActivatedRoute, useValue: activatedRouteStub}]
@@ -28,12 +30,8 @@ describe('DetailComponent', () => {
   });
 
   it('เมื่อได้รับค่าจาก paramMap ค่าของ User ที่แสดงผลควรจะเป็น User เดียวกับ ID ที่ได้รับ', () => {
-    //ตรวจสอบค่า User ที่แสดงผลว่าตรงกับ User ที่มี ID เป็น 1
-    expect(component.user.id).toBe(1)
-    expect(component.user.firstname).toBe("pitak")
-    expect(component.user.lastname).toBe("meechai")
-    expect(component.user.email).toBe("pi.m@gmail.com")
-    expect(component.user.tel).toBe("0912875566")
+    //ตรวจสอบค่า User ที่แสดงผลว่าตรงกับ User ที่นำมาทดสอบหรือไม่
+    expect(component.user.firstname).toBe(expectedUser.firstname)
   });
 });
 

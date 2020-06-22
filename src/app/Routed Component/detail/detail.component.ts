@@ -22,7 +22,7 @@ export class DetailComponent implements OnInit {
     //ดึงค่า Path Parameter เพื่อดึงค่า ID
     this._ActivatedRoute.paramMap.subscribe(param => {
       let id = param.get('id');
-      //นำค่า ID ที่ได้รัยมาหา User เพื่อใช้ในการแสดงข้อมูล
+      //นำค่า ID ที่ได้รับมาหา User เพื่อใช้ในการแสดงข้อมูล
       this.user = this.users.find(user => user.id == id);
     });
     
